@@ -45,16 +45,51 @@
     </div>
   </section>
 
-  <section id="skills">
-    <h2>🧠 Habilidades</h2>
-    <ul>
-      <li>AWS (EC2, IAM, CloudWatch)</li>
-      <li>Next.js / Node.js / Telegram Bot API</li>
-      <li>Linux / Bash scripting</li>
-      <li>Automatización y monitoreo</li>
-      <li>Git & Docker</li>
-    </ul>
-  </section>
+<section id="skills">
+  <h2>🧠 Habilidades</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <p>AWS (EC2, IAM, CloudWatch)</p>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS">
+    </div>
+
+    <div class="skill-card">
+      <p>Next.js / Node.js / Telegram Bot API</p>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+    </div>
+
+    <div class="skill-card">
+      <p>Linux / Bash scripting</p>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+    </div>
+
+    <div class="skill-card">
+      <p>Automatización y monitoreo</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png" alt="Automation">
+    </div>
+
+    <div class="skill-card">
+      <p>Git & Docker</p>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+    </div>
+  </div>
+</section>
+
+<script>
+  // Animación al hacer scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.skill-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
 
   <section id="contact">
     <h2>📫 Contacto</h2>
