@@ -48,9 +48,15 @@
 <section id="skills">
   <h2>🧠 Habilidades</h2>
   <div class="skills-grid">
+
     <div class="skill-card">
       <p>AWS (EC2, IAM, CloudWatch)</p>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
+    </div>
+
+    <div class="skill-card">
+      <p>Terraform</p>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform">
     </div>
 
     <div class="skill-card">
@@ -65,29 +71,26 @@
 
     <div class="skill-card">
       <p>Automatización y monitoreo</p>
-      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png" alt="Automation">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png" alt="Automatización">
     </div>
 
     <div class="skill-card">
       <p>Git & Docker</p>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
     </div>
+
   </div>
 </section>
 
 <script>
-  // Animación al hacer scroll
+  // Animación suave al hacer scroll
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-  });
+  }, { threshold: 0.2 });
 
-  document.querySelectorAll('.skill-card').forEach(card => {
-    observer.observe(card);
-  });
+  document.querySelectorAll('.skill-card').forEach(card => observer.observe(card));
 </script>
 
 
