@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Cloud - Victor Duran</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <h1>☁️ Victor Duran</h1>
-    <p>Técnico IT orientado a Cloud & AWS | DevOps Jr | Automatización</p>
+    <p id="typing-text"></p>
   </header>
 
-  <section id="about">
+  <section id="about" class="fade-up">
     <h2>👋 Sobre mí</h2>
     <p>
       Soy técnico de IT con 1 año y medio de experiencia en soporte técnico y administración de sistemas.
@@ -21,79 +22,56 @@
     </p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="fade-up">
     <h2>🚀 Proyecto Destacado</h2>
-
     <div class="project">
       <h3>🤖 Bot de Telegram conectado a instancias EC2 de AWS</h3>
       <p>
         Proyecto desarrollado como trabajo de fin de grado.  
         Implementé un <strong>bot de Telegram</strong> creado con <strong>Next.js</strong> que se conectaba de forma remota
         a una <strong>instancia EC2 de Amazon Web Services</strong>.  
-        El bot podía <strong>ejecutar comandos a distancia</strong> sobre la máquina virtual (por ejemplo, reiniciar servicios, consultar estado o ejecutar scripts), 
+        El bot podía <strong>ejecutar comandos a distancia</strong> sobre la máquina virtual, 
         permitiendo administrar el servidor directamente desde Telegram.
-      </p>
-      <p>
-        Este proyecto me permitió integrar desarrollo web, seguridad y automatización en la nube, utilizando
-        la API de Telegram y la infraestructura de AWS.
       </p>
     </div>
   </section>
 
-<section id="skills">
-  <h2>🧠 Habilidades</h2>
-  <div class="skills-grid">
+  <section id="skills" class="fade-up">
+    <h2>🧠 Habilidades</h2>
+    <div class="skills-grid">
 
-    <div class="skill-card">
-      <p>AWS (EC2, IAM, CloudWatch)</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
+      <div class="skill-card">
+        <p>AWS (EC2, IAM, CloudWatch)</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
+      </div>
+
+      <div class="skill-card">
+        <p>Terraform</p>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform">
+      </div>
+
+      <div class="skill-card">
+        <p>Next.js / Node.js / Telegram Bot API</p>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+      </div>
+
+      <div class="skill-card">
+        <p>Linux / Bash scripting</p>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+      </div>
+
+      <div class="skill-card">
+        <p>Git & Docker</p>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+      </div>
     </div>
+  </section>
 
-    <div class="skill-card">
-      <p>Terraform</p>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform">
-    </div>
-
-    <div class="skill-card">
-      <p>Next.js / Node.js / Telegram Bot API</p>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
-    </div>
-
-    <div class="skill-card">
-      <p>Linux / Bash scripting</p>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
-    </div>
-
-    <div class="skill-card">
-      <p>Linux</p>
-      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FN%25C3%25BAcleo_Linux&psig=AOvVaw1KliyLwPQKXvN4sNCWKdQy&ust=1761732379444000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKCi1qrTxpADFQAAAAAdAAAAABAE" alt="Linux">
-    </div>
-
-    <div class="skill-card">
-      <p>Git & Docker</p>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-    </div>
-
-  </div>
-</section>
-
-<script>
-  // Animación suave al hacer scroll
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.skill-card').forEach(card => observer.observe(card));
-</script>
-
-
-  <section id="contact">
+  <section id="contact" class="fade-up">
     <h2>📫 Contacto</h2>
     <p>
-      💼 <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a> |
-      💻 <a href="https://github.com/tuusuario" target="_blank">GitHub</a> |
+      💼 <a href="https://www.linkedin.com/in/victorduran" target="_blank">LinkedIn</a> |
+      💻 <a href="https://github.com/dduraan" target="_blank">GitHub</a> |
       ✉️ duranvictorinf@gmail.com
     </p>
   </section>
@@ -101,7 +79,7 @@
   <footer>
     <p>© 2025 Victor Duran | Portfolio Cloud</p>
   </footer>
-<script src="script.js"></script>
 
+  <script src="script.js"></script>
 </body>
 </html>
