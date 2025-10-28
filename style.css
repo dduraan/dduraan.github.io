@@ -124,3 +124,18 @@ footer {
 .skill-card:hover img {
   transform: scale(1.1);
 }
+header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  min-height: 1.5em; /* para evitar saltos mientras se escribe */
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(255,255,255,0.7);
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
