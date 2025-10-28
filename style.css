@@ -56,48 +56,71 @@ footer {
 }
 /* Fondo degradado para la sección de habilidades */
 #skills {
-  background: linear-gradient(135deg, #0078d7, #00aaff);
+  background: linear-gradient(135deg, #0066cc, #00b4ff);
   color: white;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
 
-/* Diseño en grid para las tarjetas */
+/* Título de la sección */
+#skills h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Diseño tipo grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
 }
 
 /* Tarjetas individuales */
 .skill-card {
   background: rgba(255, 255, 255, 0.15);
-  padding: 1rem;
-  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  border-radius: 14px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease;
   opacity: 0;
   transform: translateY(40px);
 }
 
-/* Imagen debajo del texto */
-.skill-card img {
-  width: 60px;
-  margin-top: 0.8rem;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+/* Texto dentro de las tarjetas */
+.skill-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f9f9f9;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-/* Animación cuando aparece en pantalla */
+/* Imágenes debajo del texto */
+.skill-card img {
+  width: 70px;
+  height: auto;
+  margin-top: 0.5rem;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.3));
+  transition: transform 0.3s ease;
+}
+
+/* Animación al entrar en pantalla */
 .skill-card.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Hover effect */
+/* Hover */
 .skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  background: rgba(255,255,255,0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.skill-card:hover img {
+  transform: scale(1.1);
 }
